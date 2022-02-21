@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParse = require('body-parser');
 const morgan = require('morgan');
 
-const port = 3333 || process.env.PORT;
+const port = process.env.PORT || 3333;
 
 const app = express();
 app.use(morgan('tiny'));
