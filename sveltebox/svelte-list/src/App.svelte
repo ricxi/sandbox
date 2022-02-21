@@ -6,21 +6,31 @@
 	let items = [];
 	$: numOfItems = items.length;
 
+	// get all list items from server before the application mounts
 	onMount(async () => {
 		items = await getItems();
 	});
 
-	// get all the list items from the server
+	// gets all list items from the server
 	const getItems = async () => {
 		const res = await fetch("http://localhost:3333/v1/items");
 		const data = await res.json();
 		return data;
 	}
-
 	
-	const deleteItem = (e) => {
+	// delete list item based on id and update the list afterwards
+	const deleteItem = async (e) => {
 		const itemId = e.detail.itemId;
-		// items = items.filter(item => item.id !== itemId);
+		
+		const res = await fetch(`http://localhost:3333/v1/items/${itemId}`, {
+			method: 'DELETE'
+		});
+
+		
+		if (res.statusText === 'OK') {
+			items = await getItems();
+			// items = items.filter(item => item.id !== itemId);
+		}
 	};
 
 </script>

@@ -21,6 +21,15 @@ app.get('/v1/items/', (req, res) => {
     res.send(items);
 })
 
+app.delete('/v1/items/:id', (req, res) => {
+    const itemId = req.params.id;
+    // implement logic to validate id here
+    const itemIndex = items.findIndex(item => item.id === itemId);
+    if (itemIndex === -1) return res.status(404).send('item does not exist');
+    items = items.filter(item => item.id !== itemId);
+    res.status(200).send({msg: 'item was successfully deleted'});
+})
+
 app.listen(port, () => {
     console.log(`listening on port ${port}...`);
 })
