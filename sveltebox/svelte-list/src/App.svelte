@@ -32,12 +32,29 @@
 		if (res.statusText === 'OK') {
 			items = await getItems();
 			// items = items.filter(item => item.id !== itemId);
+		} else {
+			console.log(res.statusText);
 		}
 	};
 
-	const addItem = (e) => {
-		const itemText = e.detail.itemText
-		console.log(itemText)
+	const addItem = async (e) => {
+		const item = e.detail;
+		
+		const res = await fetch('http://localhost:3333/v1/items', {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'				
+			},
+			body: JSON.stringify(item)
+		});
+
+		const status = await res.statusText;
+		if (status === 'OK') {
+			items = await getItems();
+		} else {
+			console.log(status);
+		}
 	}
 
 </script>

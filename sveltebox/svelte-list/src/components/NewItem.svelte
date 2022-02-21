@@ -6,9 +6,14 @@
     let itemText = "";
 
     const submitHandler = () => {
-        dispatch('add-item', {
-            itemText: itemText
-        });
+        if (itemText.length < 3) {
+            alert('please enter some text');
+        } else {
+            dispatch('add-item', {
+                itemText: itemText
+            });
+            itemText = "";
+        }
     };
 </script>
 
