@@ -2,9 +2,11 @@
 	import { onMount } from 'svelte';
 	import Header from './components/Header.svelte';
 	import Items from './components/Items.svelte';
+	import NewItem from './components/NewItem.svelte';
+
 	let appName = 'Standard List App';
 	let items = [];
-	$: numOfItems = items.length;
+	
 
 	// get all list items from server before the application mounts
 	onMount(async () => {
@@ -33,10 +35,15 @@
 		}
 	};
 
+	const addItem = (e) => {
+		const itemText = e.detail.itemText
+		console.log(itemText)
+	}
+
 </script>
 
 <main class="container">
 	<Header name={appName} />
-	<div>no. of list items: {numOfItems}</div>
+	<NewItem on:add-item={addItem}/>
 	<Items {items} on:delete-item={deleteItem}/>
 </main>
