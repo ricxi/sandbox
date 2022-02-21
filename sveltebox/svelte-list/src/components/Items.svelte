@@ -6,6 +6,10 @@
 
 <div>
     {#each items as item (item.id)}
-        <Item {item}/>
+        <Item {item} on:delete-item/>
     {/each}
 </div>
+
+<style>
+    
+</style>

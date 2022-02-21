@@ -1,10 +1,20 @@
 <script>
+    import { createEventDispatcher } from "svelte";
     export let item = '';
+
+    const dispatch = createEventDispatcher();
+
+    const deleteHandler = () => {
+        dispatch('delete-item', {
+            itemId: item.id
+        })
+    };
+    
 </script>
 
 <div>
     <span>{item.text}</span>
-    <button on:click="">X</button>
+    <button on:click="{deleteHandler}">X</button>
 </div>
 
 <style>
