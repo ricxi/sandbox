@@ -1,7 +1,8 @@
 <script>
-	let title = 'Standard List App';
+	import Header from './components/Header.svelte';
+	let appName = 'Standard List App';
 </script>
 
-<main>
-	<h1>Hello {title}!</h1>
+<main class="container">
+	<Header name={appName} />
 </main>
