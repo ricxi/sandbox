@@ -21,6 +21,15 @@ app.get('/v1/items/', (req, res) => {
     res.send(items);
 })
 
+app.post('/v1/items/', (req, res) => {
+    const item = req.body;
+    const newItemId = items.length + 1;
+    const newItem = {id: newItemId.toString(), text: item.itemText, date: 'today'}
+    items = [...items, newItem]
+    res.status(200).send(newItem)
+    console.log(items);
+})
+
 app.delete('/v1/items/:id', (req, res) => {
     const itemId = req.params.id;
     // implement logic to validate id here
