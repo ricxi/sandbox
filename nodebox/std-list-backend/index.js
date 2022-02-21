@@ -21,7 +21,6 @@ app.get('/v1/items/', (req, res) => {
     res.send(items);
 })
 
-
 app.listen(port, () => {
     console.log(`listening on port ${port}...`);
 })
