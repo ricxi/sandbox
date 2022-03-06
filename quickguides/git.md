@@ -1,5 +1,5 @@
 # Git
-Quick guide for git newbies.
+Quick guide for git newbies (you're welcome, Tom ;) ).
 The most OP git log command (A DOG): 
 ```
 $ git log --all --decorate --oneline --graph
@@ -60,7 +60,7 @@ $ git stash -u
 $ git stash pop
 ```
 
-# Contributing to Open-Source
+## Contributing to Open-Source
 A quick guide on how to contribute to an open-source project (work-in-progress)
 1. Fork the repo 
 2. Clone the fork to my local machine (might have to run npm install to install dependencies)
@@ -72,3 +72,7 @@ A quick guide on how to contribute to an open-source project (work-in-progress)
 If the maintainer asks for changes, go back to feature branch, make the changes and repeat steps 4-5. The pull request should be automatically updated.
 
 How do I update my branch before I merge changes?
+
+## Some Extra Reading
+[git set upstream](https://stackoverflow.com/questions/6089294/why-do-i-need-to-do-set-upstream-all-the-time)
+[git push local branch](https://stackoverflow.com/questions/2765421/how-do-i-push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too)
