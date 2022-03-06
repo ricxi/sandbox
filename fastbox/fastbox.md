@@ -1,5 +1,5 @@
 # FastAPI Sandbox
-Some of my notes and code that I made when learning to work with FastAPI.  So far, it's just a few things based on the guides from the FastAPi docs (which are really good).
+Initial notes and code from trying out FastAPI. So far, it's just a few things based on the guides from the FastAPi docs (which are really good). FastAPI is not yet at version 1 during this time, but all I can say right now is that it's pretty fast to learn.
 ## Setup
 1. Install uvicorn: `pip install uvicorn`
 2. Install fastapi: `pip install fastapi`
