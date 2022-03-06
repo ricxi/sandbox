@@ -1,12 +1,13 @@
 # PostCSS
 A tool for transforming css with javascript.  
+
 Best explanation I've heard that describes PostCSS:
 *PostCSS to css is what babel is to javascript*
 
 ## Quick Summary of How it Works
 PostCSS parses CSS code to create an abstract syntax tree. Plugins can be added to process this tree to add certain types of properties. Afterwards, PostCSS outputs a new CSS file with all the modifications performed by these plugins.
 
-## Setup
+## Setup & The Basics
 1. Create a node project.
 2. Install `postcss` and `postcss-cli` as dev dependencies.
 3. Install a plugin (this example uses the postcss-import plugin)
@@ -54,3 +55,12 @@ It is a bit different from the above example because it takes in the destination
 },
 ...
 ```
+### Todo
+This guide is a work-in-progress, and there are a few more topics I want to add on later:
+* More ways to use the `postcss.config.js` file
+* Source Maps
+
+## Useful Plugins
+* postcss-import
+* autoprefixer
+* cssnano
