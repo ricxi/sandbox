@@ -1,0 +1,17 @@
+{
+  "name": "postcss-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postcss:o": "postcss src/final.css --dir public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^8.4.7",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2"
+  }
+}
