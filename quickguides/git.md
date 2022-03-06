@@ -1,5 +1,5 @@
 # Git
-Quick guide for git newbies (you're welcome, Tom ;) ).
+Quick guide for git newbies. You're welcome, Tom ;).  
 The most OP git log command (A DOG): 
 ```
 $ git log --all --decorate --oneline --graph
