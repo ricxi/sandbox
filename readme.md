@@ -1,2 +1,2 @@
 # Sandbox
-Some of my code for trying out and learning new things.
+All my code scraps and notes from trying out or learning new things.
