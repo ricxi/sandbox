@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "outDir": "dist", 
+        "target": "ESNext",
+        "watch": true,
+        "lib": ["dom", "ESNext"], 
+        "esModuleInterop": true,
+    }
+}
