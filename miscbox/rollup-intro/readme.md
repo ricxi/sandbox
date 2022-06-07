@@ -1,6 +1,9 @@
 # Rollup
 I wanted to better understand the tooling behind frameworks such as svelte and react, so that I could better customize or troubleshoot my frontend applications. Since rollup is such a huge player in the standard svelte template, I thought it'd be a good place to start.
 
+## What is Rollup?
+Rollup is a module bundler. What is a module bundler? A piece of software that combines many javascript files into one file.
+
 ## Setup & Basics
 1. Download/install rollup `npm i rollup` (global install is cool tool).
 2. Create a `rollup.config.js` file, in the root directory.
